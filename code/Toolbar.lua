@@ -549,7 +549,7 @@ _addon.Feature.Toolbar.ScaledBar = function( parent, name, bg, fg, lowFg, midFg,
 	local key = parent:GetName()..name
 	local o = _G[key]
 	if o == nil then o = _addon.Frames.__NewTopLevel(key)
-			:SetParent( parent )
+			:SetParent( GuiRoot )
 			:SetDimensions(width,9)
 			:SetHidden(false)
 			:SetAnchor(CENTER,GuiRoot,CENTER,0,0)
@@ -608,7 +608,7 @@ _addon.Feature.Toolbar.MultiBar = function( count, parent, name, bg, fg, lowFg, 
 	local key = parent:GetName()..name
 	local o = _G[key]
 	if o == nil then o = _addon.Frames.__NewTopLevel(key)
-			:SetParent( parent )
+			:SetParent( GuiRoot )
 			:SetDimensions(width,mh)
 			:SetHidden(false)
 			:SetAnchor(TOP,GuiRoot,TOP,0,-10000)
